@@ -16,6 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Avatar from '@mui/material/Avatar'
+import Button from '@mui/material/Button'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -29,7 +30,7 @@ const Search = styled('div')(({ theme }) => ({
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     // marginLeft: theme.spacing(3),
-    marginLeft: '44rem',
+    // marginLeft: '40rem',
     width: 'auto',
   },
 }));
@@ -53,7 +54,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '10ch',
     },
   },
 }));
@@ -158,18 +159,18 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{padding: 0, height: '4rem'}}>
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2, padding: 0, width: '1rem' }}
           >
             <MenuIcon />
           </IconButton>
-          <Avatar alt="Example Alt" src="../../public/Apple_logo_black.svg" />
+          <Avatar alt="Example Alt" src="./Infinity-symbol.webp" />
           <Typography
             variant="h5"
             noWrap
@@ -178,6 +179,10 @@ export default function PrimarySearchAppBar() {
           >
            STARVENS
           </Typography>
+          <Box sx={{display: 'flex', width: '30rem', marginLeft: '28rem'}}>
+            <Button sx={{color: 'black'}}>Catogories</Button>
+            <Button sx={{color: 'black'}}>What's new</Button>
+            <Button sx={{color: 'black'}}>Support</Button>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -187,6 +192,7 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+          </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
