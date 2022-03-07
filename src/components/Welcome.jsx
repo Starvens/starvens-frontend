@@ -4,9 +4,9 @@ import React from 'react'
 const Welcome = () => {
   return (
     // <Box sx={{position:'fixed', top: '50%', left: '30%', fontWeight: '600', fontSize: '3rem'}}>Welcome to STARVENS!!</Box>
-    <Box sx={{position:'fixed', top: '50%', left: '30%', fontWeight: '600', fontSize: '3rem'}}>
+    <Box sx={{position:'fixed', top: '45%', left: '13%', fontWeight: '600', fontSize: '3rem'}}>
       <Box>Welcome to STARVENS!!</Box>
-      <Box sx={{fontSize: '2rem', marginLeft: '13rem'}}><i>One place to all</i></Box>
+      <Box sx={{fontSize: '2rem', marginLeft: '17rem'}}><i>One place to all</i></Box>
       </Box>
   )
 }

@@ -17,6 +17,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
+import Paper from '@mui/material/Paper'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -159,7 +160,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{padding: 0, height: '4rem'}}>
+      <AppBar position="static" sx={{ padding: 0, height: '4rem' }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -170,28 +171,38 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Avatar alt="Example Alt" src="./Infinity-symbol.webp" />
-          <Typography
+          {/* <Avatar alt="Example Alt" src="./Infinity-symbol.webp" /> */}
+          {/* <Image src='./Starvens Logo.png' /> */}
+          {/* <Paper variant="outlined"> */}
+          <Box>
+            {/* height: 3.5 rem width: 11rem */}
+            <img src="./StarvensLogo.png" height={50} width={150} />
+          </Box>
+          {/* </Paper> */}
+
+          {/* <Typography
             variant="h5"
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' }, fontWeight:600}}
           >
            STARVENS
-          </Typography>
-          <Box sx={{display: 'flex', width: '30rem', marginLeft: '28rem'}}>
-            <Button sx={{color: 'black'}}>Catogories</Button>
-            <Button sx={{color: 'black'}}>What's new</Button>
-            <Button sx={{color: 'black'}}>Support</Button>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+          </Typography> */}
+          <Box sx={{ display: 'flex', width: '40rem', marginLeft: '5rem' }}>
+            <Button size="small" sx={{marginRight:'0.5rem', color: 'black', ':hover': {bgcolor: 'white'} }}>About us</Button>
+            <Button size="small" sx={{marginRight:'0.5rem', color: 'black', ':hover': {bgcolor: 'white'} }}>Services</Button>
+            <Button size="small" sx={{marginRight:'0.5rem', color: 'black', ':hover': {bgcolor: 'white'}}}>What's new</Button>
+            <Button size="small" sx={{marginRight:'0.5rem', color: 'black', ':hover': {bgcolor: 'white'}}}>Support</Button>
+            <Button size="small" sx={{marginRight:'0.5rem', color: 'black', ':hover': {bgcolor: 'white'}}}>Contact us</Button>
+            <Search> 
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </Search>
           </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
